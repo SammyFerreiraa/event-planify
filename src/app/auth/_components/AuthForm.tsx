@@ -4,12 +4,25 @@ import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useForm } from 'react-hook-form'
+import { toast } from '@/components/ui/use-toast'
+import { signIn } from 'next-auth/react'
 
 export default function AuthForm() {
   const form = useForm()
 
   const handleSubmit = form.handleSubmit(async (data) => {
-    console.log(data)
+    try {
+      await signIn('nodemailer', { email: data.email, redirect: false })
+      toast({
+        title: 'Magic Link Sent',
+        description: 'Check your email for the magic link',
+      })
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Something went wrong, please try again',
+      })
+    }
   })
   return (
     <div className="mx-auto max-w-sm space-y-6">
