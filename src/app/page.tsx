@@ -39,7 +39,7 @@ export default function Component() {
             <div className="flex items-center space-x-4">
               <Link
                 className="inline-block rounded-md border border-gray-200  bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                href="#"
+                href="/auth"
               >
                 Login
               </Link>
