@@ -18,12 +18,14 @@ import {
 } from '@radix-ui/react-icons'
 import { Session } from 'next-auth'
 import { signOut } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 type userDropdownProps = {
   user: Session['user']
 }
 
 export function UserDropdown({ user }: userDropdownProps) {
+  const router = useRouter()
   if (!user) return
   return (
     <DropdownMenu>
@@ -70,7 +72,7 @@ export function UserDropdown({ user }: userDropdownProps) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={() => router.push('/')}>
           <UploadIcon className="mr-3 h-4 w-4" /> Homepage
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => signOut()}>
