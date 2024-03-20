@@ -28,7 +28,7 @@ function DashboardSidebarHeader({
   children,
 }: DashboardSidebarGenericProps) {
   return (
-    <header className={cn(['border-b border-border px-6 py-3', className])}>
+    <header className={cn(['border-b border-border px-6 py-3.5', className])}>
       {children}
     </header>
   )
