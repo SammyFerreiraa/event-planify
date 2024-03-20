@@ -11,8 +11,10 @@ import {
 } from '@/components/ui/dropdown-menu'
 import {
   MixerHorizontalIcon,
-  LockClosedIcon,
   RocketIcon,
+  UploadIcon,
+  PlusCircledIcon,
+  ExitIcon,
 } from '@radix-ui/react-icons'
 import { Session } from 'next-auth'
 import { signOut } from 'next-auth/react'
@@ -52,19 +54,27 @@ export function UserDropdown({ user }: userDropdownProps) {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <RocketIcon className="mr-3 h-4 w-4" />
+          Upgrade
+        </DropdownMenuItem>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <MixerHorizontalIcon className="mr-3 h-3 w-3" />
+            <MixerHorizontalIcon className="mr-3 h-4 w-4" />
             Configurações
           </DropdownMenuItem>
+          <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <RocketIcon className="mr-3 h-3 w-3" />
-            Upgrade
+            <PlusCircledIcon className="mr-3 h-4 w-4" />
+            Create Event
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <UploadIcon className="mr-3 h-4 w-4" /> Homepage
+        </DropdownMenuItem>
         <DropdownMenuItem onClick={() => signOut()}>
-          <LockClosedIcon className="mr-3 h-3 w-3" /> Log out
+          <ExitIcon className="mr-3 h-4 w-4" /> Log out
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

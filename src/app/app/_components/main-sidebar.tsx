@@ -2,13 +2,10 @@
 
 import { DashboardSidebar } from '@/components/dashboard/sidebar'
 import { usePathname } from 'next/navigation'
-import {
-  MixerHorizontalIcon,
-  HomeIcon,
-  RocketIcon,
-} from '@radix-ui/react-icons'
+import { MixerHorizontalIcon, HomeIcon } from '@radix-ui/react-icons'
 import { UserDropdown } from './user-dropdown'
 import { Session } from 'next-auth'
+import Logo from '@/components/Logo'
 
 type mainSidebarProps = {
   user: Session['user']
@@ -26,15 +23,16 @@ export default function MainSidebar({ user }: mainSidebarProps) {
   return (
     <DashboardSidebar>
       <DashboardSidebar.Header>
-        <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary">
-          <RocketIcon className=" h-3 w-3 text-primary-foreground" />
+        <div className="flex items-center justify-center space-x-2 font-semibold hover:underline">
+          <Logo />
+          <span>EventPlanify</span>
         </div>
       </DashboardSidebar.Header>
       <DashboardSidebar.Main className="flex flex-grow flex-col">
         <DashboardSidebar.Nav>
           <DashboardSidebar.Nav.Main>
             <DashboardSidebar.Nav.NavLink href="/app" active={isActive('/app')}>
-              <HomeIcon className="mr-3 h-3 w-3" />
+              <HomeIcon className="mr-3 h-5 w-5" />
               My Events
             </DashboardSidebar.Nav.NavLink>
             <DashboardSidebar.Nav.NavLink
