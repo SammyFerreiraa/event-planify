@@ -2,10 +2,10 @@
 
 import { DashboardSidebar } from '@/components/dashboard/sidebar'
 import { usePathname } from 'next/navigation'
-import { MixerHorizontalIcon, HomeIcon } from '@radix-ui/react-icons'
 import { UserDropdown } from './user-dropdown'
 import { Session } from 'next-auth'
 import Logo from '@/components/Logo'
+import { LuHome, LuSettings2 } from 'react-icons/lu'
 
 type mainSidebarProps = {
   user: Session['user']
@@ -32,14 +32,14 @@ export default function MainSidebar({ user }: mainSidebarProps) {
         <DashboardSidebar.Nav>
           <DashboardSidebar.Nav.Main>
             <DashboardSidebar.Nav.NavLink href="/app" active={isActive('/app')}>
-              <HomeIcon className="mr-3 h-5 w-5" />
+              <LuHome className="mr-3 h-3 w-3" />
               My Events
             </DashboardSidebar.Nav.NavLink>
             <DashboardSidebar.Nav.NavLink
               href="/app/settings"
               active={isActive('/app/settings')}
             >
-              <MixerHorizontalIcon className="mr-3 h-3 w-3" />
+              <LuSettings2 className="mr-3 h-3 w-3" />
               Configurações
             </DashboardSidebar.Nav.NavLink>
           </DashboardSidebar.Nav.Main>
