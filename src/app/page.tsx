@@ -10,7 +10,7 @@ export default function Component() {
   return (
     <>
       <div className="border-t border-gray-200 bg-gray-50/90 dark:border-gray-800 dark:bg-gray-950">
-        <header className="w-full py-4 md:py-6">
+        <header className="w-full py-3 md:py-5">
           <div className="container flex items-center justify-between px-4 md:px-6">
             <Link className="flex items-center space-x-2 font-bold" href="#">
               <CalendarCheckIcon className="h-6 w-6" />
@@ -52,7 +52,7 @@ export default function Component() {
           <img
             alt="Background"
             className="aspect-[2/1] w-full overflow-hidden object-cover"
-            src="/images/placeholder.jpg"
+            src="/images/placeholder.jpeg"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="container grid gap-4 px-4 text-center md:px-6">
@@ -104,47 +104,60 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <Accordion className="w-full px-4" collapsible type="single">
-        <AccordionItem value="info">
-          <AccordionTrigger>Event Information</AccordionTrigger>
-          <AccordionContent>
-            <p>
-              Here you will find all the relevant information about EventPlanify
-              and how it can transform your event planning process.
-            </p>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>
-            How can EventPlanify streamline my event planning?
-          </AccordionTrigger>
-          <AccordionContent>
-            EventPlanify offers comprehensive tools for managing invitations,
-            registrations, and attendee engagement, making your event planning
-            seamless and efficient.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>
-            What unique features does EventPlanify offer?
-          </AccordionTrigger>
-          <AccordionContent>
-            From customizable event pages to real-time analytics and feedback
-            collection, EventPlanify provides a suite of features designed to
-            enhance both the planner and attendee experience.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>
-            Can EventPlanify support large-scale events?
-          </AccordionTrigger>
-          <AccordionContent>
-            Absolutely. EventPlanify is built to support events of any size,
-            offering scalable solutions to meet your specific needs, from small
-            gatherings to large conferences.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <div className="flex w-full items-center justify-center">
+        <div className="max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
+            <div>
+              <h2 className="text-4xl font-extrabold text-gray-900">
+                For you: <br />
+                Some frequently asked questions
+              </h2>
+            </div>
+            <Accordion className="w-full px-4" collapsible type="single">
+              <AccordionItem value="info">
+                <AccordionTrigger>Event Information</AccordionTrigger>
+                <AccordionContent>
+                  <p>
+                    Here you will find all the relevant information about
+                    EventPlanify and how it can transform your event planning
+                    process.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  How can EventPlanify streamline my event planning?
+                </AccordionTrigger>
+                <AccordionContent>
+                  EventPlanify offers comprehensive tools for managing
+                  invitations, registrations, and attendee engagement, making
+                  your event planning seamless and efficient.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>
+                  What unique features does EventPlanify offer?
+                </AccordionTrigger>
+                <AccordionContent>
+                  From customizable event pages to real-time analytics and
+                  feedback collection, EventPlanify provides a suite of features
+                  designed to enhance both the planner and attendee experience.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>
+                  Can EventPlanify support large-scale events?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Absolutely. EventPlanify is built to support events of any
+                  size, offering scalable solutions to meet your specific needs,
+                  from small gatherings to large conferences.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </div>
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
           <div className="space-y-3">
