@@ -6,6 +6,7 @@ import { UserDropdown } from './user-dropdown'
 import { Session } from 'next-auth'
 import Logo from '@/components/Logo'
 import { LuHome, LuSettings2 } from 'react-icons/lu'
+import { MdOutlineEventNote } from 'react-icons/md'
 
 type mainSidebarProps = {
   user: Session['user']
@@ -36,11 +37,18 @@ export default function MainSidebar({ user }: mainSidebarProps) {
               My Events
             </DashboardSidebar.Nav.NavLink>
             <DashboardSidebar.Nav.NavLink
+              href="/app/events"
+              active={isActive('/app/events')}
+            >
+              <MdOutlineEventNote className="mr-3 h-3 w-3" />
+              Events
+            </DashboardSidebar.Nav.NavLink>
+            <DashboardSidebar.Nav.NavLink
               href="/app/settings"
               active={isActive('/app/settings')}
             >
               <LuSettings2 className="mr-3 h-3 w-3" />
-              Configurações
+              Settings
             </DashboardSidebar.Nav.NavLink>
           </DashboardSidebar.Nav.Main>
         </DashboardSidebar.Nav>
