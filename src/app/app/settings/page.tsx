@@ -1,5 +1,4 @@
 import DashboardPage from '@/components/dashboard/page'
-import { EventsTable } from './_components/events-table'
 
 export default function Settings() {
   return (
@@ -8,7 +7,7 @@ export default function Settings() {
         <DashboardPage.Header.Title>Settings</DashboardPage.Header.Title>
       </DashboardPage.Header>
       <DashboardPage.Main>
-        <EventsTable />
+        <div className="flex flex-col space-y-6"></div>
       </DashboardPage.Main>
     </DashboardPage>
   )
