@@ -52,9 +52,21 @@ function DashboardPageMain({ className, children }: DashboardPageGenericProps) {
   return <main className={cn(['p-6', className])}>{children}</main>
 }
 
+function DashboardPageFooter({
+  className,
+  children,
+}: DashboardPageGenericProps) {
+  return (
+    <footer className={cn(['mt-auto border-t border-border p-6', className])}>
+      {children}
+    </footer>
+  )
+}
+
 DashboardPage.Header = DashboardPageHeader
 DashboardPageHeader.Nav = DashboardPageHeaderNav
 DashboardPageHeader.Title = DashboardPageHeaderTitle
 DashboardPage.Main = DashboardPageMain
+DashboardPage.Footer = DashboardPageFooter
 
 export default DashboardPage
