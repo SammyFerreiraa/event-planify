@@ -12,6 +12,12 @@ export function middleware(request: NextRequest) {
   if (pathname === '/app' && !token) {
     return NextResponse.redirect(new URL(getUrl('/auth')))
   }
+  if (pathname === '/app/events' && !token) {
+    return NextResponse.redirect(new URL(getUrl('/auth')))
+  }
+  if (pathname === '/app/settings' && !token) {
+    return NextResponse.redirect(new URL(getUrl('/auth')))
+  }
 }
 
 export const config = {
