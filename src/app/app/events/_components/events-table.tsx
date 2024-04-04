@@ -258,7 +258,7 @@ export function EventsTable() {
   })
 
   return (
-    <div className="flex h-full w-full flex-col justify-between">
+    <div className="flex h-full w-full flex-col justify-between overflow-y-auto">
       <div className="">
         <Table>
           <TableHeader className="">
@@ -326,7 +326,7 @@ export function EventsTable() {
               <SelectValue placeholder={table.getState().pagination.pageSize} />
             </SelectTrigger>
             <SelectContent side="top">
-              {[2, 3, 4, 5, 6].map((pageSize) => (
+              {[2, 3, 4, 5, 7].map((pageSize) => (
                 <SelectItem key={pageSize} value={`${pageSize}`}>
                   {pageSize}
                 </SelectItem>

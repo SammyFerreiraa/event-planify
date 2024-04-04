@@ -13,7 +13,7 @@ export default function Events() {
           Join
         </Button>
       </DashboardPage.Header>
-      <DashboardPage.Main className="flex-1 p-0">
+      <DashboardPage.Main className="flex-1 overflow-hidden p-0">
         <EventsTable />
       </DashboardPage.Main>
     </DashboardPage>
