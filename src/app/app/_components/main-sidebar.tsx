@@ -33,21 +33,21 @@ export default function MainSidebar({ user }: mainSidebarProps) {
         <DashboardSidebar.Nav>
           <DashboardSidebar.Nav.Main>
             <DashboardSidebar.Nav.NavLink href="/app" active={isActive('/app')}>
-              <LuHome className="mr-3 h-3 w-3" />
+              <LuHome className="mr-3 h-4 w-4" />
               My Events
             </DashboardSidebar.Nav.NavLink>
             <DashboardSidebar.Nav.NavLink
               href="/app/events"
               active={isActive('/app/events')}
             >
-              <MdOutlineEventNote className="mr-3 h-3 w-3" />
+              <MdOutlineEventNote className="mr-3 h-4 w-4" />
               Events
             </DashboardSidebar.Nav.NavLink>
             <DashboardSidebar.Nav.NavLink
               href="/app/settings"
               active={isActive('/app/settings')}
             >
-              <LuSettings2 className="mr-3 h-3 w-3" />
+              <LuSettings2 className="mr-3 h-4 w-4" />
               Settings
             </DashboardSidebar.Nav.NavLink>
           </DashboardSidebar.Nav.Main>
